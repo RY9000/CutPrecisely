@@ -492,10 +492,7 @@ INT_PTR CALLBACK DialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lPara
 			wcscat_s(cmdline, cmdlength, L"  -c:a  aac  -ar  48000  -ac  2  -ab  128k  ");
 			wcscat_s(cmdline, cmdlength, shuchuwenjian);
 
-			if ((GetKeyState(VK_SHIFT) < 0) && (GetKeyState(VK_CONTROL) < 0) &&
-				(GetKeyState(VK_MENU) < 0))
-				DialogBox(NULL, MAKEINTRESOURCE(IDD_DIALOG1), hwndDlg, DialogProc2);
-			else
+
 			{
 				wchar_t ErrMsg[200] = L"\0";
 				DWORD errID;
